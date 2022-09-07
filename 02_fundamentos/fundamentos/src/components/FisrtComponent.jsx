@@ -1,3 +1,5 @@
+import { MyComponent } from './MyComponent';
+
 export const FirstComponent = () => {
   //comentario de uma linha na parte lógica da função
 
@@ -12,6 +14,8 @@ export const FirstComponent = () => {
 
       <h1>Meu primeiro componente</h1>
       <p className="teste">Meu texto</p>
+
+      <MyComponent />
     </div>
   );
 };
