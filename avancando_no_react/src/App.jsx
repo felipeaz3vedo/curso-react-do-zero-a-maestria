@@ -1,3 +1,5 @@
+import React from './assets/react.svg';
+
 export const App = () => {
   return (
     <div>
@@ -5,6 +7,10 @@ export const App = () => {
       <div>
         {/* imagem em public */}
         <img src="/vite.svg" alt="Logomarca do Vite" />
+      </div>
+      <div>
+        {/* imagem em asset */}
+        <img src={React} alt="Logomarca do React" />
       </div>
     </div>
   );
