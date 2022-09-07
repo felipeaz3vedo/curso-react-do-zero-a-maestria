@@ -1,4 +1,5 @@
 import React from './assets/react.svg';
+import { ManageData } from './components/ManageData';
 
 export const App = () => {
   return (
@@ -12,6 +13,7 @@ export const App = () => {
         {/* imagem em asset */}
         <img src={React} alt="Logomarca do React" />
       </div>
+      <ManageData />
     </div>
   );
 };
