@@ -1,4 +1,5 @@
 import React from './assets/react.svg';
+import { ListRender } from './components/ListRender';
 import { ManageData } from './components/ManageData';
 
 export const App = () => {
@@ -14,6 +15,7 @@ export const App = () => {
         <img src={React} alt="Logomarca do React" />
       </div>
       <ManageData />
+      <ListRender />
     </div>
   );
 };
