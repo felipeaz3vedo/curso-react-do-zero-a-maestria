@@ -1,7 +1,11 @@
+//components
+import { FirstComponent } from './components/FisrtComponent';
+
 export const App = () => {
   return (
     <>
-      <h1>oi</h1>
+      <h1>Fundamentos React</h1>
+      <FirstComponent />
     </>
   );
 };
