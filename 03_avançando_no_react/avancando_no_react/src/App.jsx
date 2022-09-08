@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import React from './assets/react.svg';
+import { CarDetails } from './components/CarDetails';
 import { ConditionalRender } from './components/ConditionalRender';
 import { ListRender } from './components/ListRender';
 import { ManageData } from './components/ManageData';
@@ -21,7 +22,10 @@ export const App = () => {
       <ManageData />
       <ListRender />
       <ConditionalRender />
+      {/* props */}
       <ShowUserName name={'Felipe'} userName={userName} />
+      {/* destructuring */}
+      <CarDetails brand='VW' km={100000} color="azul" />
     </div>
   );
 };
