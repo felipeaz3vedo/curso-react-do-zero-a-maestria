@@ -5,6 +5,7 @@ import { ConditionalRender } from './components/ConditionalRender';
 import { ListRender } from './components/ListRender';
 import { ManageData } from './components/ManageData';
 import { ShowUserName } from './components/ShowUserName';
+import { Fragment } from './components/Fragment';
 
 export const App = () => {
   const [userName] = useState('Maria');
@@ -45,6 +46,8 @@ export const App = () => {
           km={car.km}
         />
       ))}
+
+      <Fragment propFragment={'teste'}/>
     </div>
   );
 };
