@@ -8,6 +8,7 @@ import { ManageData } from './components/ManageData';
 import { ShowUserName } from './components/ShowUserName';
 import { Fragment } from './components/Fragment';
 import { Container } from './components/Container';
+import { ExecuteFunction } from './components/ExecuteFunction';
 
 export const App = () => {
   const [userName] = useState('Maria');
@@ -17,6 +18,8 @@ export const App = () => {
     { id: 2, brand: 'BMW', color: 'azul', newCar: true, km: 0 },
     { id: 3, brand: 'Renault', color: 'preto', newCar: false, km: 1203 }
   ];
+
+  const showMessage = () => console.log('evento do componente pai!');
 
   return (
     <div>
@@ -42,6 +45,7 @@ export const App = () => {
 
       {cars.map(car => (
         <CarDetails
+          key={car.id}
           brand={car.brand}
           color={car.color}
           newCar={car.newCar}
@@ -57,6 +61,8 @@ export const App = () => {
       <Container myValue={'teste 2'}>
         <h5>testando o container</h5>
       </Container>
+      {/* executar função */}
+      <ExecuteFunction myFunction={showMessage} />
     </div>
   );
 };
