@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import React from './assets/react.svg';
+
 import { CarDetails } from './components/CarDetails';
 import { ConditionalRender } from './components/ConditionalRender';
 import { ListRender } from './components/ListRender';
 import { ManageData } from './components/ManageData';
 import { ShowUserName } from './components/ShowUserName';
 import { Fragment } from './components/Fragment';
+import { Container } from './components/Container';
 
 export const App = () => {
   const [userName] = useState('Maria');
@@ -46,8 +48,15 @@ export const App = () => {
           km={car.km}
         />
       ))}
-
-      <Fragment propFragment={'teste'}/>
+      {/* fragment */}
+      <Fragment propFragment={'teste'} />
+      {/* children */}
+      <Container myValue={'teste'}>
+        <p>E este é o conteúdo</p>
+      </Container>
+      <Container myValue={'teste 2'}>
+        <h5>testando o container</h5>
+      </Container>
     </div>
   );
 };
