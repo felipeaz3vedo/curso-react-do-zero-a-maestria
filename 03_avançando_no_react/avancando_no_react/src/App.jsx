@@ -8,6 +8,13 @@ import { ShowUserName } from './components/ShowUserName';
 
 export const App = () => {
   const [userName] = useState('Maria');
+
+  const cars = [
+    { id: 1, brand: 'Ferrari', color: 'vermelho', newCar: true, km: 0 },
+    { id: 2, brand: 'BMW', color: 'azul', newCar: true, km: 0 },
+    { id: 3, brand: 'Renault', color: 'preto', newCar: false, km: 1203 }
+  ];
+
   return (
     <div>
       <h1>Avançando em React</h1>
@@ -29,6 +36,15 @@ export const App = () => {
       {/* reaproveitando */}
       <CarDetails brand="Ford" km={0} color="vermelha" newCar={true} />
       <CarDetails brand="Fiat" km={4500} color="branco" newCar={false} />
+
+      {cars.map(car => (
+        <CarDetails
+          brand={car.brand}
+          color={car.color}
+          newCar={car.newCar}
+          km={car.km}
+        />
+      ))}
     </div>
   );
 };
