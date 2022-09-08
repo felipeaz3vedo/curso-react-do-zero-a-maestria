@@ -1,9 +1,12 @@
+import { useState } from 'react';
 import React from './assets/react.svg';
 import { ConditionalRender } from './components/ConditionalRender';
 import { ListRender } from './components/ListRender';
 import { ManageData } from './components/ManageData';
+import { ShowUserName } from './components/ShowUserName';
 
 export const App = () => {
+  const [userName] = useState('Maria');
   return (
     <div>
       <h1>Avançando em React</h1>
@@ -18,6 +21,7 @@ export const App = () => {
       <ManageData />
       <ListRender />
       <ConditionalRender />
+      <ShowUserName name={'Felipe'} userName={userName} />
     </div>
   );
 };
