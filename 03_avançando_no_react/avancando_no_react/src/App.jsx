@@ -25,7 +25,10 @@ export const App = () => {
       {/* props */}
       <ShowUserName name={'Felipe'} userName={userName} />
       {/* destructuring */}
-      <CarDetails brand='VW' km={100000} color="azul" />
+      <CarDetails brand="VW" km={100000} color="azul" newCar={false} />
+      {/* reaproveitando */}
+      <CarDetails brand="Ford" km={0} color="vermelha" newCar={true} />
+      <CarDetails brand="Fiat" km={4500} color="branco" newCar={false} />
     </div>
   );
 };
